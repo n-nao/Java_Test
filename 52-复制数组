@@ -1,0 +1,21 @@
+package com.xxxxxxxfuzhishuzu;
+import java.util.Arrays;
+/*
+ * 复制数组
+ */
+public class Demo {
+    public static void main(String[] args) {
+        int arr[]=new int [] {23,42,12};//定义数组
+        int newarr[]=Arrays.copyOf(arr, 5);//定义新数组,并把arr赋值给新数组
+        for(int i=0;i<newarr.length;i++) {
+            System.out.print(newarr[i]+"  ");//遍历并输出新数组
+        }
+        System.out.println();
+        
+        int arr2[]=new int[] {23,42,12,84,10};//定义数组
+        int newarr2[]=Arrays.copyOfRange(arr2, 0, 3);//赋值数组的0~2索引位置的值给新数组
+        for(int j=0;j<newarr2.length;j++) {
+            System.out.print(newarr2[j]+"  ");
+        }
+    }
+}
