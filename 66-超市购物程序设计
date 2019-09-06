@@ -1,0 +1,101 @@
+超市购物程序设计
+文件1
+package com.cn.itcase.chapter03.task01;
+/*
+ * 定义商品类
+ */
+public class Product {
+    private String proName;//商品名-成员变量
+    public String getProName() {//方法
+        return proName;//返回商品名proName
+    }
+    public void setProName(String proName) {
+        this.proName=proName;//将参数值赋值给成员变量proName
+    }
+}
+文件2
+package com.cn.itcase.chapter03.task01;
+/*
+ * 定义超市类
+ */
+public class Market {//超市类
+    private String marketName;//商品名-成员变量
+    private Product[] ProductArr;//定义数组,超市仓库,存放商品
+    public String getMarketName() {//定义get方法
+        return marketName;//返回商品名
+    }
+    public void setMarketName(String marketName) {//定义set方法
+        this.marketName=marketName;//将属性值赋值给成员变量
+    }
+    public Product[] getProductArr() {//定义get方法
+        return ProductArr;//返回Product的值
+    }
+    public void setProductArr(Product[] productArr) {
+        this.ProductArr=productArr;
+    }
+    Product sell(String name) {//卖货,指定商品名
+        //循环遍历仓库中的每一个商品
+        for(int i=0;i<ProductArr.length;i++) {
+            //如果商品名称与要买的商品一致
+            if(ProductArr[i].getProName()==name) {
+                return ProductArr[i];//将这个商品返回
+            }
+        }
+        return null;//循环结束后都没找到商品,则返回null表示没买到
+    }
+}
+文件3
+package com.cn.itcase.chapter03.task01;
+/*
+ * 定义购物者
+ */
+public class Person {//人类
+    private  String name;
+    public String getName() {//定义get方法
+        return name;
+    }
+    public void setName(String name) {//定义set方法
+        this.name=name;//将参数值 赋值给name成员变量
+    }
+    //购物,指定去哪个超市,超市名
+    Product shoppint(Market market,String name) {
+        //调用超市卖货方法,指定商品名,把卖出的结果返回
+        return market.sell(name);
+    }
+}
+文件4
+package com.cn.itcase.chapter03.task01;
+/*
+ * 定义测试类
+ */
+public class Shopping {
+    public static void main(String[] args) {
+        //创建商品对象,给名字赋值
+        Product p1=new Product();
+        Product p2=new Product();
+        Product p3=new Product();
+        Product p4=new Product();
+        Product p5=new Product();
+        p1.setProName("电视机");
+        p2.setProName("洗衣机");
+        p3.setProName("豆浆机");
+        p4.setProName("空调机");
+        p5.setProName("吹风机");
+        //创建超市对象,给超市名字赋值,给仓库赋值
+        Market m=new Market();
+        m.setMarketName("家乐福");
+        m.setProductArr(new Product[] {p1,p2,p3,p4,p5});
+        //创建人对象,给名字赋值
+        Person p=new Person();
+        p.setName("小韩");
+        //调用购物方法,指定超市和商品名,得到购物结果
+//      Product result=p.shoppint(m,"豆浆机");
+        Product result=p.shoppint(m,"土豆");
+        //根据结果判断
+        if(result!=null) {
+            System.out.println(p.getName()+"在"+m.getMarketName()+"买到了"+result.getProName());
+        }else {
+            System.out.println(p.getName()+"白跑了一趟,在"+m.getMarketName()+"什么也没买到");
+        }
+    }
+}
