@@ -1,0 +1,152 @@
+package com.xxxxxxxczifuchuan;
+import java.util.Date;
+import javax.swing.plaf.synth.SynthSeparatorUI;
+import javax.xml.crypto.Data;
+import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
+/*
+ * 字符串练习
+ */
+public class Demo {
+    public static void main(String[] args) {
+       String str;//创建字符串
+       str="你好呀";//为字符串变量赋值
+       
+       char a[]= {'g','o','o','d'};//创建字符数组
+       String s=new String(a);//创建字符串对象
+       System.out.println(a);//输出a的值
+       //等价于 String s=new String(good);
+       
+       char b[]= {'s','t','u','d','e','n','t'};//创建字符数组
+       String t=new String(b,2,4);//截取字符串对象
+       System.out.println(t);
+       //等价于String t=new String(uden);
+       
+       char c[]={'s','t','u','d','e','n','t'};//创建字符数组
+       String u=new String(c);//连接字符形成字符串
+       System.out.println(u);//输出u的值
+       //等价于String u=new String(student);
+       
+       //连接字符串
+       String d="早上好";
+       String e=",小明!";
+       String f=d+e;//+号表示连接字符串
+       System.out.println(f);
+       
+       //获取字符串的长度
+       String g="We are students";
+       int h=g.length();//将字符串g的长度赋值给h(空格页表示字符)
+       System.out.println("字符串g的长度为"+h);
+       
+       //字符串查找
+       String i="We are student";
+       int j=i.indexOf("a");//查找a在字符串i的索引位置
+       System.out.println("a在字符串i的索引位置为"+j);
+       
+       //查找字符在字符串最后位置出现的索引位置
+       String k="hello,good morning";
+       int l=k.lastIndexOf("o");//查找字符o在字符串k最后位置出现的索引位置
+       System.out.println("字符o在字符串k中最后出现的索引位置为:"+l);
+       
+       //获取指定索引位置的字符
+       String m="hello word";
+       char n=m.charAt(6);//获取索引位置为6的字符
+       System.out.println("索引位置为6的字符"+n);
+       
+       //获取子字符串
+       String oString="hello good tom";
+       String pString=oString.substring(4);//截取从第四个索引位置到最后的字符串
+       System.out.println(pString);
+       String qString=oString.substring(3, 12);//截取从第四个索引位置到第12个索引位置的字符串
+       System.out.println(qString);
+       
+       //去掉空格
+       String rString="  a bcde f  ";
+       String string=rString.trim();//去掉前边空格和后边空格
+       System.out.println(string);
+       
+       //字符串替换
+       String t1="ok good ok";
+       System.out.println("字符串替换之前"+t1);
+       String t2=t1.replace("o", "v");//将t1字符串中所有的o替换成v
+       System.out.println("字符串替换之后"+t2);
+       
+       //判断字符串的开头和结尾
+       String a1="book steam";
+       boolean a2=a1.startsWith("b");//判断a1是否是以b开头
+       boolean a3=a1.endsWith("n");//判断a1是否以n结尾
+       System.out.println("a1是否以b开头"+a2);
+       System.out.println("a1是否以n结尾"+a3);
+       
+       //判断两个字符串是否相等
+       String b0="ASDo";
+       String b1="asdf";
+       String b2="asdf";
+       boolean b3=(b2.equals(b1));
+       boolean b4=(b2.equalsIgnoreCase(b0));
+       System.out.println("b1与b2的值是否相等"+b3);
+       System.out.println("b1与b0的值是否相等"+b4);
+       
+       //按字典顺序比较两个字符串
+       String c1="a";
+       String c2="c";
+       String c3="e";
+       //比较字符顺序并输出
+       System.out.println(c1+"compareTo"+c2+":"+c2.compareTo(c1));
+       System.out.println(c3+"compareTo"+c1+":"+c1.compareTo(c3));
+       
+//     字符串大小写转换
+       String d1="asdfHJKJL";
+       System.out.println("将大写字符转换成小写"+d1.toLowerCase());
+       System.out.println("将小写转换成大写"+d1.toUpperCase());
+       
+       //字符串分割
+       String e1="qeuw.iuiwq.yruw.qyru";
+       //按照"."进行分割,使用转义字符"\\."
+       String[] e2=e1.split("\\.");
+       //按照.进行两次分割,使用转义字符\\.
+       String e3 []=e1.split("\\.",2);
+       //输出e1的原值
+       System.out.println("e1的原值为"+e1);
+       //输出全部分割结果
+       for(String e4:e2) {
+           System.out.print("["+e4+"]");
+       }
+       System.out.println();
+       for(String e5:e3) {
+           System.out.print("["+e5+"]");
+       }
+       System.out.println();
+       
+       //格式化字符串
+       Date date=new Date();
+       String year=String.format("%tY", date);
+       System.out.println("今年是"+year);
+       
+//     使用正则表达式
+       //定义要匹配e-mail地址的正则表达式
+       String regex="\\w+@\\w+(\\.\\w{2,3})*\\.\\w{2,3}";
+       String str1="aaa@";
+       String str2="aaaaaaa";
+       String str3="1123@qq.com";
+       if(str.matches(regex)) {
+           System.out.println(str1+"是一个合法的e-mail地址");
+       }
+       if(str2.matches(regex)) {
+           System.out.println(str2+"是一个合法的e-mail地址");
+       }
+       if(str3.matches(regex)) {
+           System.out.println(str3+"是一个合法的e-mail地址");
+       }
+       
+       
+       //字符串生成器
+       StringBuilder builder=new StringBuilder("123");//创建字符串生成器
+       for(int asq=0;asq<10;asq++) {//循环给builder增加字符
+           builder.append(asq);//循环增加字符
+       }
+       System.out.println(builder);//输出builder的值
+       
+    }
+}
+
+运行结果:
