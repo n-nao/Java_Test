@@ -1,0 +1,10 @@
+package com.si;
+public class Demo {
+    public static void main(String [] args){
+       float f1=13.23f;
+       float f2=445.23;//float类型的值,不带f会报错
+       double d1=4562.12d;
+       double d2=45678.1564;
+    }
+}
+效果
