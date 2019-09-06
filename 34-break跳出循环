@@ -1,0 +1,19 @@
+    package com.xxxxxxxxxuanhuankongzhi;
+/*
+ * 循环控制语句break
+ * 当执行到这一步时跳出循环
+ */
+public class Demo {
+    public static void main(String[] args) {
+       //////////循环语句////////////////
+       for (int i=0;i<=100;i++) {
+           System.out.println(i);
+           if(i==6) {
+               break;//判断如果i=6跳出循环
+           }
+       }
+       System.out.println("-----end-----");
+    }
+}
+
+运行结果:
