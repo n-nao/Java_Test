@@ -1,0 +1,17 @@
+package com.leiheduixinag.duiixnagbijiao;
+/*
+ * 对象的比较
+ */
+public class Demo {
+   public static void main(String[] args) {
+      //创建两个String类型对象的引用
+      String c1=new String("abc");
+      String c2=new String("abc");
+      String c3=c1;//将c1的值赋值给c3
+      //使用==运算符比较c2,c3的
+      System.out.println("c2==c3的运算结果为"+(c2==c3));
+      //使用.equals()比较c2与c3
+      System.out.println("c2.equals(c3)的运算结果为"+(c2.equals(c3)));
+   }
+}
+运行结果:
