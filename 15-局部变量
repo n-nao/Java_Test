@@ -1,0 +1,12 @@
+package com.xxxxxxxxxxx.shi;
+public class Demo {
+    ///////局部变量的名称可以和成员变量的名称相同,但在方法中局部变量的值将失效
+    static int times=3;//定义成员变量
+    public static void main(String [] args) {
+        int times=5;//定义局部变量
+        System.out.println("输出成员变量times="+Demo.times);//输出成员变量
+        System.out.println("输出局部变量值times="+times);//输出局部变量值
+    }
+}
+
+运行结果:
