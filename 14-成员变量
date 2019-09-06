@@ -1,0 +1,14 @@
+package com.jiu;
+public class Demo {
+        int x=5;//实例变量
+        static int y=90;//静态变量
+        
+        public static void main(String [] args) {
+            int b=y;//静态变量可以直接调用
+//          int c=x;//实例变量不可直接调用
+        }
+}
+class var{
+//  int a=Demo.x;//实例变量不可跨类调用
+    int d=Demo.y;//静态变量可以跨类调用
+}
