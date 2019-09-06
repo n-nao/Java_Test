@@ -1,0 +1,18 @@
+package com.xxxxxxfangfa;
+/*
+ * 成员方法
+ */
+public class Demo {
+    /*
+     * 权限修饰符   返回值类型  方法名  (参数类型  参数名){
+     * .....//方法体
+     * return 返回值;
+     * }
+     */
+    
+    public static int Asd(int a) {
+       int a1=1;
+       return a1;
+    }
+    
+}
