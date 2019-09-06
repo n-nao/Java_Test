@@ -1,0 +1,16 @@
+package com.xxxxxxxxcontinue;
+/*
+ * continue语句,跳过本次循环执行下一循环
+ * 输出1~20之间的奇数
+ */
+public class Demo {
+    public static void main(String[] args) {
+       for(int i=0;i<20;i++) {
+           if(i%2==0) {//判断i的值被2除,余数是否等于0
+               continue;//当余数为0时跳过本次循环
+           }
+           System.out.println(i);
+       }
+    }
+}
+运行结果:
