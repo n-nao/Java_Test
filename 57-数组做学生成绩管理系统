@@ -1,0 +1,84 @@
+import java.util.Scanner;
+/*
+ * 数组做学生成绩管理系统
+ */
+public class A5_18 {
+     public static void main(String[] args) {
+          Scanner in=new Scanner(System.in);
+          System.out.println("请输入学生的人数:");
+          int renshu=in.nextInt();//定义人数
+          System.out.println("请输入课程数目");
+          int courseNumber=in.nextInt();//定义课程数
+          String name[]=new String[renshu];//存储姓名的数组
+          String courcs[] =new String[courseNumber];//存储课程数组
+          int number[][]=new int[renshu][courseNumber];//定义二位数组用于存储成绩
+          int Sum[]=new int[renshu];//定义总成绩数组
+          int avg[]=new int[renshu];//定义平均分数组
+          String str[]=new String[renshu];//定义排行榜数组
+          /*
+           * 循环输入课程名
+           */
+          for(int i=0;i<courcs.length;i++) {//循环输入课程名
+              System.out.println("请输入第"+(i+1)+"门课的名字");
+              courcs[i]=in.next();//将课程名存入数组
+          }
+          /*
+           * 循环输入姓名和成绩
+           */
+          for(int i=0;i<renshu;i++) {//循环用于输入学生姓名及成绩
+              int S=0;//定义分数
+              System.out.println("请输入第"+(i+1)+"学生姓名");
+              name[i]=in.next();//将获取的姓名存储给name数组
+              String str11="";
+              for(int j=0;j<courcs.length;j++) {
+                   System.out.println("请输入学生"+name[i]+"的"+courcs[j]+"成绩");
+                   number[i][j]=in.nextInt();//将成绩赋值给成绩数组
+                   S=S+number[i][j];//求总分
+                   str11=str11+number[i][j]+"\t";//姓名成绩字符数组值
+              }
+              Sum[i]=S;//求得总成绩
+              avg[i]=S/courseNumber;//求本学生的平均分
+              str[i]=name[i]+"\t"+str11+Sum[i]+"\t"+avg[i];//将成绩,,总分,平均分存到字符数组内
+          }
+          /*
+           * 冒泡排序做成绩排行榜
+           */
+          for(int i=0;i<Sum.length-1;i++) {
+              for(int j=0;j<Sum.length-1;j++) {
+                   if(Sum[j]<Sum[j+1]) {
+                        int t1=Sum[j];
+                        String t2=str[j];
+                        Sum[j]=Sum[j+1];
+                        str[j]=str[j+1];
+                        Sum[j+1]=t1;
+                        str[j+1]=t2;
+                   }
+              }
+          }
+          /*
+           * 输出表头
+           */
+          System.out.print("学生");
+          for(int i=0;i<courcs.length;i++) {//循环 输出课程名
+              System.out.print("\t"+courcs[i]);
+          }
+          System.out.print("\t总分\t平均分\t排行榜");
+          System.out.println();
+          /*
+           * 输出姓名及成绩
+           */
+          for(int i=0;i<renshu;i++) {
+              System.out.println(str[i]+"\t第"+(i+1)+"名");//输出成绩排行榜
+          }
+          
+//        for(int i=0;i<renshu;i++) {//循环 输出姓名
+//            System.out.print(name[i]);
+//            for(int j=0;j<courseNumber;j++) {//循环输出成绩
+//            System.out.print("\t"+number[i][j]);//输出各科成绩
+//            }
+//            System.out.print("\t"+Sum[i]+"\t"+avg[i]);//总成绩输出//平均分输出
+//            System.out.println();
+//        }
+     }
+}
+运行效果:
