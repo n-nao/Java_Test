@@ -1,0 +1,26 @@
+package com.xxxxxxxxxxx.shier;
+import javax.imageio.event.IIOReadWarningListener;
+//////自增和自减运算符/////////
+public class Demo {
+    public static void main(String [] srgs) {
+       int a=6;
+       System.out.println("a的值为"+a);
+       ++a;//==a=a+1;
+       System.out.println("++a的值为"+a);
+       int b=3;
+       System.out.println("b的值为"+b);
+       --b;//==b=b-1;
+       System.out.println("--b的值为"+b);
+       int c=9;
+       System.out.println("c的值为"+c);
+       c++;//==c,c=c+1;
+       System.out.println("c++得"+c);
+       int d=3;
+       System.out.println("d的值为"+d);
+       d--;//==d,d=d-1;
+       System.out.println("d--得"+d);
+       
+    }
+}
+
+运行结果
