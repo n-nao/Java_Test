@@ -1,0 +1,23 @@
+package com.xxxxxlia;
+/*
+ * 分别分割两个字符串的一部分进行比较(不区分大小写)
+ */
+public class Demo {
+    public static void main(String[] args) {
+        //定义两个字符串
+        String str1="qwerasd";
+        String str2="QWERASD";
+        //分割字符串的一部分并赋值给新变量
+//      String str3=str1.substring(3);
+        String str3=str1.substring(2);
+        String str4=str2.substring(3);
+        //判断分割后的两个字符串是否想等(不区分大小写)
+        if(str3.equalsIgnoreCase(str4)) {
+            System.out.println("str3的内容与str4的内容相等");
+        }else {
+            System.out.println("str3的内容与str4的内容不相等");
+        }
+    }
+}
+运行结果:
+str3的内容与str4的内容不相等
