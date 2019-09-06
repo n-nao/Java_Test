@@ -1,0 +1,10 @@
+    package com.xxxxxxxxxxxlianxi;
+/*编写java程序将两个数的和输出*/
+public class Demo {
+    public static void main(String [] args) {
+       int a=3;
+       int b=4;
+       System.out.println(a+b);
+    }
+}
+运行结果
