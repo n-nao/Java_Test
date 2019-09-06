@@ -1,0 +1,23 @@
+package com.xxxxxxxxxxxx.chengyuan;
+/*
+ * 成员变量练习
+ *
+ */
+public class Demo {//类
+    private String name;//定义String类型的成员变量
+    int a=1;//定义int型成员变量
+    
+    public String getName() {//定义一个get方法
+       int id=0;//定义局部变量
+       setName("java");//调用类中其他方法
+       return id+this.name;//返回值
+    }
+    
+    private void setName(String name) {//定义set方法
+       this.name=name;//将参数值赋值给成员变量
+    }
+    
+    public Demo getDemo() {
+       return this;//返回Demo类引用
+    }
+}
