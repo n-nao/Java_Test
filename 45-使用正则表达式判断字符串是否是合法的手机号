@@ -1,0 +1,35 @@
+package com.xxxxxxxxxxx.sho;
+/*
+ * 使用正则表达式判断字符串是否是合法的手机号
+ */
+public class Demo {
+    public static void main(String[] args) {
+        //定义要匹配的手机号的正则表达式
+        String tel="1+\\d\\d\\d\\d\\d\\d\\d\\d\\d\\d";
+        String test="123548755";
+        String asdf="15225477150";
+        String aqwe="01545456555";
+        String wer="1jjhfjsdhfd";
+        if(test.matches(tel)) {//判断字符串变量与正则表达式是否相等
+            System.out.println(test+"是一个有效的电话号码");
+        }else {
+            System.out.println(test+"不是一个有效的电话号码");
+        }
+        if(asdf.matches(tel)) {
+            System.out.println(asdf+"是一个有效的电话号码");
+        }else {
+            System.out.println(asdf+"不是一个有效的电话号码");
+        }
+        if(aqwe.matches(tel)) {
+            System.out.println(aqwe+"是一个有效的电话号码");
+        }else {
+            System.out.println(aqwe+"不是一个有效的电话号码");
+        }
+        if(wer.matches(tel)) {
+            System.out.println(wer+"是一个有效的电话号码");
+        }else {
+            System.out.println(wer+"不是一个有效的电话号码");
+        }
+    }
+}
+运行结果:
