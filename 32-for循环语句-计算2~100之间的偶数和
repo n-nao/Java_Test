@@ -1,0 +1,16 @@
+package com.xxxxxxxxfor;
+/*
+ * for循环语句
+ * 计算2~100之间的偶数和
+ */
+public class Demo {
+    public static void main(String[] args) {
+        int sum=0;
+        for(int i=2;i<=100;i=i+2) {
+            sum=sum+i;
+        }
+       System.out.println("2到100之间的偶数值为"+sum);
+    }
+}
+运行结果:
+
