@@ -1,0 +1,44 @@
+package com.xxxxxxxxswitch;
+/*
+ * switch语句
+ */
+public class Demo {
+    public static void main(String[] args) {
+//      定义字符串变量
+        String str="明日科技";
+//      switch语句
+        switch(str) {
+        case "明日":
+            System.out.println("明日");
+            break;
+        case "科技":
+            System.out.println("科技");
+            break;
+        case "明日科技":
+            System.out.println("明日科技");
+            break;
+        default:
+            System.out.println("未知");
+            break;
+        }
+        
+        //将周一到周三的英语单词打印出来
+        int week=2;
+        switch (week) {
+        case 1:
+            System.out.println("Mondey");
+            break;
+        case 2:
+            System.out.println("Tuesday");
+            break;
+        case  3:
+            System.out.println("Wednesday");
+            break;
+        default:
+            System.out.println("未知");
+            break;
+        }
+        
+    }
+}
+运行结果:
