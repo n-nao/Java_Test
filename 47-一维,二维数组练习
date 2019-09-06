@@ -1,0 +1,28 @@
+package com.xxxxxxxshuzu;
+/*
+ * 一维,二维数组练习
+ */
+public class Demo {
+    public static void main(String[] args) {
+        //创建并初始化一维数组
+        int day[] =new int []{1,2,3,4,5,6};
+        for(int i=0;i<6;i++) {//遍历输出数组的值
+            System.out.print(day[i]);
+        }
+        
+        System.out.println();
+        System.out.println();
+        
+        //创建并初始化二维数组
+        int asd[][]={{1,2,3},{4,5,6},{7,8,9},{0,0,0}};
+        for(int i=0;i<4;i++) {//外层循环循环第一层数组
+            for(int j=0;j<asd[i].length;j++) {//内层循环循环第二层数组
+                System.out.print(asd[i][j]);
+            }
+            System.out.println();
+        }
+    }
+}
+
+运行效果:
+
