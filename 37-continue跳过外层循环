@@ -1,0 +1,21 @@
+package com.xxxxxxxxco;
+/*
+ * continue跳过外层循环
+ * 格式:       标签名 : 循环体{
+ *                 continue 标签名;
+ *             }
+ */
+public class Demo {
+    public static void main(String[] args) {
+        Loop:for(int i=0;i<3;i++) {//在for循环前用标签标记
+               for(int j=0;j<6;j++) {
+                      if(i==1) {     //如果i等于2就跳过外层循环
+                          continue Loop;//跳过Loop标签标记的循环体
+                        }
+                        System.out.println("i="+i+"j="+j);
+                }
+         }
+    }
+}
+
+运行结果:
