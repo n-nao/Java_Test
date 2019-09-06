@@ -1,0 +1,106 @@
+类1系统类
+package com.jisuanqi;
+import java.util.Scanner;
+public class XiTong {
+    public static void JieShao() {
+        System.out.println("欢迎使用本计算器");
+        System.out.println("请输入所需的计算功能");
+    }
+    @SuppressWarnings("resource")
+    public static  String GongNeng() {
+        Scanner gongneng=new Scanner(System.in);
+        String GongNeng=gongneng.next();
+        return GongNeng;
+    }
+    
+    public  void PanDuan() {
+        String Pan=XiTong.GongNeng();
+        switch(Pan) {
+        case "+":
+            System.out.println("进入加法");
+            Jia.Jia();
+            break;
+        case "-":
+        System.out.println("进入减法");
+            Jian.Jian();
+        break;
+        case "*":
+            System.out.println("进入乘法");
+                Cheng.Cheng();
+            break;
+        case "/":
+            System.out.println("进入除法");
+                Chu.Chu();
+            break;
+        default:
+                System.out.println("输入有错");
+        break;
+        }
+    }
+}
+类2从键盘输入数值
+package com.jisuanqi;
+import java.util.Scanner;
+//用于导入数值
+public class Shu {
+    public static  int Shu() {
+        @SuppressWarnings("resource")
+        Scanner shu=new Scanner(System.in);
+        int Shu=shu.nextInt();
+        return Shu;
+}
+}
+类3加法
+package com.jisuanqi;
+public class Jia {
+    public static void Jia() {
+        System.out.println("请输入数值");
+        int a=Shu.Shu();
+        System.out.println("+");
+        int b=Shu.Shu();
+        System.out.println("和为"+a+b);
+    }
+}
+类4减法
+package com.jisuanqi;
+public class Jian {
+    public static void Jian() {
+        System.out.println("请输入数值");
+        int a=Shu.Shu();
+        System.out.println("-");
+        int b=Shu.Shu();
+        System.out.println("差为"+(a-b));
+    }
+}
+类5乘
+package com.jisuanqi;
+public class Cheng {
+    public static void Cheng() {
+        System.out.println("请输入数值");
+        int a=Shu.Shu();
+        System.out.println("X");
+        int b=Shu.Shu();
+        System.out.println("积为"+a*b);
+    }
+}
+类6除
+package com.jisuanqi;
+public class Chu {
+    public static void Chu() {
+        System.out.println("请输入数值");
+        int a=Shu.Shu();
+        System.out.println("/");
+        int b=Shu.Shu();
+        System.out.println("商为"+a/b);
+    }
+}
+test类
+package com.jisuanqi;
+public class Test {
+    public static void  main(String [] args) {
+        XiTong Xi=new XiTong();
+        Xi.JieShao();
+        Xi.PanDuan();
+    }
+}
+效果
