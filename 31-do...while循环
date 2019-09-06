@@ -1,0 +1,15 @@
+package com.xxxxxxxdowhile;
+/*
+ * do...while循环
+ * 先执行语句一次,然后进行判断,如果满足判断条件则执行循环体,否则跳出循环
+ */
+public class Demo {
+    public static void main(String[] args) {
+        int a=100;
+        do {
+            System.out.println("ok");
+            a--;
+        }while(a==60);
+    }
+}
+运行结果
