@@ -1,0 +1,17 @@
+package com.xxxxxxxxxxbianl;
+public class Demo {
+//  声明成员变量
+    int age=324;
+    int sfg=34;
+    public static void main(String [] args) {
+       //声明局部变量
+       int name=435;
+       int qwe=435;
+       
+       /**
+       成员变量位于类中,局部变量位于方法中
+        */
+       
+       
+    }
+}
