@@ -1,0 +1,79 @@
+银行存款开户取款项目
+文件1
+package com.mianxiangduixiang.yinhang;
+/*
+ * 定义银行类
+ */
+public class Bank {
+    static String bankName;//定义静态变量,银行名称
+    private String name;//储户名称
+    private String password;//储户密码
+    private double balance;//账户余额
+    private double turnover;//交易额
+    //静态方法,打印出银行欢迎语句
+    static void welcome() {
+        System.out.println("欢迎来到"+bankName+"------------");
+    }
+    //构造方法 开户
+    public Bank (String name,String password,double turnover) {
+        //将参数值赋值给成员变量
+        this.name=name;
+        this.password=password;
+        this.turnover=turnover;
+        this.balance=turnover-10;
+        System.out.println(name+"开户成功,账户余额"+balance);
+    }
+    //存款
+    public void deposit(double turnover) {
+        balance =balance+turnover;//计算存款之后的总金额
+        System.out.println(name+"您好,您的账户已存入"+turnover+"元,当前余额为"+balance+"元.");
+    }
+    //取款
+    public void withdrawal(String password,double turnover) {
+        //根据传入变量与成员变量比较,判断密码是否正确
+        if(this.password!=password) {
+            System.out.println("您输入的密码错误!");
+            return ;
+        }
+        //判断余额是否充足
+        if(balance-turnover>0) {
+            balance=balance-turnover;
+            System.out.println(name+"您好,您的账户已取出"+turnover+"元,当前余额为"+balance+"元");
+        }else {
+            System.out.println("对不起,账户余额不足");
+        }
+    }
+    //静态方法,打印出银行的下次光临
+    static void welcomeNext() {
+        System.out.println("请携带好随身物品,欢迎下次使用"+bankName+"-------------");
+    }
+        
+}
+文件2
+package com.mianxiangduixiang.yinhang;
+/*
+ * 定义用户交易类
+ */
+public class Trade {
+    public static void main(String[] args) {
+        //定义一家银行(给静态变量赋值,可直接使用类名访问)
+        Bank.bankName="招商银行";//调用bank中的静态方法
+        //调用静态方法,打印银行欢迎语句
+        Bank.welcome();//调用静态方法
+        //通过构造方法进行开户操作
+        Bank bank=new Bank("小梦","654321", 100.0);//创建对象并给构造方法参数赋值
+        //进行存款操作
+        bank.deposit(500.0);//调用deposit方法
+        //取款时密码输入错误,取款失败
+        bank.withdrawal("123456", 200);//调用withdrawal方法
+        //取款时余额不足,取款失败
+        bank.withdrawal("654321", 1000.0);//调用withdrawal方法
+        //取款时密码正确,余额充足,取款成功
+        bank.withdrawal("654321", 200);//调用withdrawal方法
+        //调用静态方法,欢迎下次使用
+        bank.welcomeNext();//调用方法
+    }
+}
+
+运行结果:
+
