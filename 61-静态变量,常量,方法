@@ -1,0 +1,28 @@
+package com.leiheduixinag.jingtaichangliangfangfa;
+/*
+ * 静态变量,常量,方法
+ * 在静态方法中不能直接使用this关键字
+ * 在静态方法中不能直接调用非静态方法
+ */
+public class Demo {
+   final static double PI=3.1415;//在类中定义静态常量
+   static int id;//在类中定义静态变量
+   
+   public static void method1() {//在类中定义静态方法
+      
+   }
+   
+   public void method2() {//在类中定义一个非静态方法
+      System.out.println(Demo.PI);//调用静态常量
+      System.out.println(Demo.id);//调用静态变量
+      Demo.method1();//调用静态方法
+   }
+   
+   public static Demo method3() {//在类中定义一个静态方法
+        //错误的调用及使用this
+      method2();//调用非静态方法
+      return this;
+   }
+   
+   
+}
