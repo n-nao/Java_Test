@@ -1,0 +1,7 @@
+package com.yi;
+public class Demo {
+    public static void main(String [] args) {
+       System.out.println("<<java入门到精通>>");
+       System.out.println("是我学习java的最佳书籍");
+    }
+}
