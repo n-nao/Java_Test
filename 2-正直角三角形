@@ -1,0 +1,30 @@
+类1
+package com.jiujiuchengfabiao;
+public class ChengFaBiao {
+    public static void Cheng(){
+        
+        for(int a=0;a<9;a++){
+            for(int b=9;b>a;b--) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    
+    }
+}
+类2
+package com.jiujiuchengfabiao;
+public class Test {
+    public static void main(String args[]) {
+        ChengFaBiao.Cheng();
+    }
+效果:
+*********
+********
+*******
+******
+*****
+****
+***
+**
+*
