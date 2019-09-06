@@ -1,0 +1,17 @@
+package com.leiheduixinag.zhufangfa;
+/*
+ * 类的主方法
+ */
+public class Demo {
+   public static void main(String []args) {//定义主方法
+      for(int i=0;i<args.length;i++) {//循环遍历参数
+          System.out.println(args[i]);//循环打印参数
+      }
+   }
+}
+运行结果:
+
+使用方法:
+
+
+
