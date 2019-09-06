@@ -1,0 +1,17 @@
+package com.xxxxxxxxxxxx.zhui;
+/*
+ * 用字符串生成器在str后加数字1~10
+ */
+public class Demo {
+    public static void main(String[] args) {
+        //定义一个字符串
+        String str="asd:";
+        //创建字符串生成器
+        StringBuilder builder=new StringBuilder(str);
+        for(int i=1;i<11;i++) {//循环
+            builder.append(i);//将数字1`9加到字符串str中
+        }
+        System.out.println("在字符串生成器后加字符效果"+builder);
+    }
+}
+运行结果
