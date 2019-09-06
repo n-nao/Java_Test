@@ -1,0 +1,18 @@
+package com.xxxxxxxxxxx.shisan;
+///////比较运算符///////////
+public class Demo {
+    public static void main(String [] args) {
+       //声明int型变量
+       int number1=4;
+       int number2=5;
+       //////将number1与number2进行比较////
+       System.out.println("number1>number2的返回值为"+(number1>number2));//大于
+       System.out.println("number1<number2的返回值为"+(number1<number2));//小于
+       System.out.println("number1==number2的返回值为"+(number1==number2));//等于
+       System.out.println("number1>=number2的返回值为"+(number1>=number2));//大于等于
+       System.out.println("number1<=number2的返回值为"+(number1<=number2));//小于等于
+       System.out.println("number1!=number2的返回值为"+(number1!=number2));//不等于
+    }
+}
+
+运行结果
