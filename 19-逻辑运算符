@@ -1,0 +1,18 @@
+package com.xxxxxxxxxxx.ayi;
+//逻辑运算符
+public class Demo {
+    public static void main(String [] args) {
+//     声明变量
+       int a=2;
+       int b=5;
+       //声明布尔值变量,用于保存&&与运算符返回的值
+       boolean result1=((a>b)&&(a!=b));//a>b为false,a!=b为true,综合起来是false,全真为真,有假即假
+       //声明布尔值变量,用于保存或||运算符返回值
+       boolean result2=((a>b)||(a!=b));//a>b为false,a!=b为true,综合起来为true,有真为真
+       System.out.println(result1);//将变量result1的值输出
+       System.out.println(result2);//将变量result2的值输出
+    }
+}
+
+运行结果:
+
