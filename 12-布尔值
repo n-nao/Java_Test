@@ -1,0 +1,15 @@
+package com.qi;
+public class Demo {
+    public static void main(String [] args) {
+        boolean b;//定义布尔值类型变量b
+        boolean b1,b2;//定义布尔值变量b1,b2
+        boolean a1=true,a2=false;//给布尔值变量赋值
+        boolean 真=true;//java中允许使用汉字或其他语言作为变量名
+        System.out.println(a1);
+        System.out.println(a2);
+        System.out.println(真);
+    }
+}
+
+运行效果
+
