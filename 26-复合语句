@@ -1,0 +1,26 @@
+package com.xxxxxxxxxfuhe;
+/*
+ * 复合语句可以嵌套使用
+ */
+public class Demo {
+    public static void main(String [] args) {
+        int x=20;
+        
+        //这是复合语句
+        {
+            int y=40;
+            System.out.println(y);
+            int z=245;
+            boolean b;
+            //这也是复合语句
+            {
+                b=y>z;
+                System.out.println(b);
+            }
+        }
+        String word="hello java";
+        System.out.println(word);
+    }
+}
+
+运行结果:
