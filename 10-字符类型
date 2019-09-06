@@ -1,0 +1,18 @@
+package com.wu;
+public class Demo {
+    public static void main(String [] args) {
+       //////定义字符型变量//////
+       char word='d',word2='@';
+       //////定义整形变量////////
+       int p=23045,p2=45213;
+       //////字符输出编码位置/////////
+       System.out.println("d在uticode表中的顺序位置 是:"+(int)word);
+       System.out.println("@在uticode表中的顺序位置 是:"+(int)word2);
+       //////整数转换成字符输出/////////
+       System.out.println("uticode表中的23045位置 是:"+(char)p);
+       System.out.println("uticode表中的45213位置 是:"+(char)word);
+       
+    }
+}
+效果
+
