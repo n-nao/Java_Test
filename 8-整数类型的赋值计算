@@ -1,0 +1,15 @@
+package com.san;
+public class Demo {
+    public static void main(String [] args) {
+       /////声明各个类型的变量并赋值//////
+       byte mybyte=124;
+       short myshort=32564;
+       int myint=45784612;
+       long mylong=46789451;
+       long result=mybyte+myshort+myint+mylong;
+       //////输出值的和////////////
+       System.out.println("result的值为"+result);
+    }
+}
+
+效果
