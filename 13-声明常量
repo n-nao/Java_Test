@@ -1,0 +1,19 @@
+package com.ba;
+public class Demo {
+    //声明常量PI,若常量在声明是不进行赋值则会出现错误提示
+    static final double PI=3.14;
+    //声明变量age
+    static int age=23;
+    public static void main(String [] args) {
+        final int number;//声明int型常量number
+        number=12345;//对常量进行赋值
+        age=23;//对变量进行赋值
+        /////////常量只能赋值一次//////////
+//      number=345;//会报错
+        System.out.println("PI的值为"+PI);
+        System.out.println("赋值后number的值为"+number);
+        System.out.println("age的值为"+age);
+    }
+}
+
+运行效果:
