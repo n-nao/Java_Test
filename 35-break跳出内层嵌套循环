@@ -1,0 +1,18 @@
+package com.xxxxxxxxxutiaochuqiantao;
+/*
+ * break跳出嵌套循环
+ * 只能跳出包含他的最内层循环
+ */
+public class Demo {
+    public static void main(String[] args) {
+       for(int i=0;i<3;i++) {//#1
+           for(int j=0;j<6;j++) {//#2
+               if(j==4) {//判断,如果j等于4就结束内部循环//即跳出#1循环
+                  break;
+               }
+               System.out.println("i="+i+"j="+j);//输出值
+           }
+       }
+    }
+}
+运行结果:
