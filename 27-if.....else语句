@@ -1,0 +1,24 @@
+package com.xxxxxxxxxifelse;
+/*
+ * if ..else语句
+ */
+public class Demo {
+    public static void main(String [] args) {
+        int math=96;
+        int english=45;
+        if (math>60) {
+            System.out.println("数学成绩及格了");
+        }else {
+            System.out.println("数学成绩没及格");
+        }
+        
+        String aString="英语成绩及格了";
+        String bString="英语成绩没及格";
+        if (english>60)
+            System.out.println(aString);
+        else
+            System.out.println(bString);
+    }
+}
+
+运行结果:
