@@ -1,0 +1,23 @@
+package com.xxxxxxxshuzuchaxun;
+import java.util.Arrays;
+/*
+ * 数组查询
+ */
+public class Demo {
+    public static void main(String[] args) {
+        
+        //数组索引值查询
+        int ia[]=new int[] {1,8,9,4,5};//定义数组
+        Arrays.sort(ia);//对数组进行排序
+        int index=Arrays.binarySearch(ia, 4);//查找字符4在数组中的索引值
+        System.out.println("字符4在数组中的索引值"+index);
+        System.out.println();
+        
+        //对值进行索引
+        String str[]=new String[] {"ab","cd","ef","yz"};//创建数组
+        Arrays.sort(str);//对数组进行排序
+        int ids=Arrays.binarySearch(str, 0,2,"cd");
+        System.out.println("字符串cd的索引值为"+ids);
+    }
+}
+运行结果:
