@@ -1,0 +1,32 @@
+package com.leiheduixinag.fangwenduixiang;
+/*
+ * 访问对象的属性和行为
+ */
+public class Demo {
+   int i=47;//定义int型成员变量
+   public void call() {//定义成员方法
+      System.out.println("调用成员方法call");
+      for(i=0;i<3;i++) {
+          System.out.print(i+" ");
+          if(i==2) {
+             System.out.println("\n");
+          }
+      }
+   }
+   
+   public  Demo() {//定义构造方法
+      
+   }
+   
+   public static void main(String[] args) {
+      Demo d1=new Demo();//创建一个对象
+      Demo d2=new Demo();//创建另外一个对象
+      d2.i=60;//将成员变量赋值为60
+      //使用第一个对象调用类成员变量
+      System.out.println("第一个实例对象调用成员变量i的结果为"+d1.i++);
+      d1.call();//使用第一个对向调用类成员方法
+      System.out.println("第二个实例对象调用成员变量i的结果为"+d2.i);
+      d2.call();
+   }
+}
+运行结果:
