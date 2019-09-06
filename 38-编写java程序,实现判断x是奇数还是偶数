@@ -1,0 +1,15 @@
+package com.xxxxxxxxlian;
+/*
+ * 编写java程序,实现判断x是奇数还是偶数
+ */
+public class DEmo {
+    public static void main(String[] args) {
+       int x=678;
+       if(x%2==0) {
+           System.out.println("x为偶数");
+       }else{
+           System.out.println("x为奇数");
+       }
+    }
+}
+运行结果:
