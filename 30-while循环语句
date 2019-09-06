@@ -1,0 +1,17 @@
+package com.xxxxxxxxwhile;
+/*
+ * while循环语句
+    先判断如果为真执行循环体,为假则跳过循环体
+ */
+public class DEmo {
+    public static void main(String[] args) {
+        int x=1;
+        int sum=0;
+        while(x<=10) {
+            sum=sum+x;
+            x=x+1;
+        }
+        System.out.println("sum的值为:"+sum);
+    }
+}
+运行结果
