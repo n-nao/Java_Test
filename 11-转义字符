@@ -1,0 +1,20 @@
+package com.liu;
+public class Demo {
+    public static void main(String [] args) {
+        System.out.println("\123");//八进制表示
+        System.out.println("\u0052");//十六进制表示
+        System.out.println("你\'啊\'");//单引号表示
+        System.out.println("哈\\哈哈");//反斜杠字符
+        System.out.println("下一\t边");//下一制表符类似TAB键
+        System.out.println("你\r好呀");//回车换行
+        System.out.println(" \b嗨嗨");//退格
+        System.out.println("\f下一页");//下一页
+        char c1='\\';//定义字符变量
+        char char1='\u2605';//定义字符变量
+        System.out.println(c1);//输出字符变量c1--->\
+        System.out.println(char1);//输出字符变量char1------>★
+        System.out.println("");
+    }
+}
+
+效果
