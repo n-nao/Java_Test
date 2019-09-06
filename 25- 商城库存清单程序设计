@@ -1,0 +1,47 @@
+package com.xxxxxxxxxshangcheng;
+/*
+ 商城库存清单程序设计
+ */
+public class Demo {
+    public static void main(String [] args) {
+        //苹果笔记本电脑
+        String macBrand="MacBookAir";//品牌型号
+        double macSize=13.3;//尺寸
+        double macPrince=6988.88;//价格
+        String macConfig="i5处理器4GB内存128G固态硬盘";//配置
+        int macCount=5;//库存数
+        
+//      联想Thinkpad笔记本电脑
+        String thinkpadBrand="ThinkpadT450";
+        double thinkpadSize=14.0;
+        double thinkpadPrice=5999.99;
+        String thinkpadConfig="i5处理器4GB内存500G硬盘";
+        int thinkpadCount=10;
+        
+//      华硕笔记本电脑
+        String ASUSBrand="ASUS-FL5800";
+        double ASUSSize=15.6;
+        double ASUSPrice=4999.50;
+        String ASUSConfig="i7处理器4GB内存128G固态硬盘";
+        int ASUSCount=18;
+        
+//      列表顶部
+        System.out.println("----------------------商城库存清单"
+                +"--------------------------");
+        System.out.println("品牌型号\t\t尺寸\t价格\t配置\t\t\t库存数");
+//      列表中部
+        System.out.println(macBrand+"\t"+macSize+"\t"+macPrince+"\t"+macConfig+"\t"+macCount);
+        System.out.println(thinkpadBrand+"\t"+thinkpadSize+"\t"+thinkpadPrice+"\t"+thinkpadConfig+"\t"+thinkpadCount);
+        System.out.println(ASUSBrand+"\t"+ASUSSize+"\t"+ASUSPrice+"\t"+ASUSConfig+"\t"+ASUSCount);
+        
+//      统计总库存数,库存总金额
+        int totalCount=macCount+thinkpadCount+ASUSCount;
+        double totalMoney=(macCount*macPrince)+(thinkpadCount*thinkpadPrice)+(ASUSCount*ASUSPrice);
+        //列表底部
+        System.out.println("------------------------------------------------------------");
+        System.out.println("总库存数:"+totalCount);
+        System.out.println("库存商品总金额:"+totalMoney);
+    }
+}
+
+运行结果:
