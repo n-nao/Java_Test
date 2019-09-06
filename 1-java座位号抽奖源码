@@ -1,0 +1,53 @@
+项目要求:java抽奖随机座位号项目 100列*100号---共抽取10人
+类1
+package com.choujiang.aaa;
+//本类用于输出抽中的列和号
+public class SuiJiShu {
+    static void hang() {
+        double a=0;
+        double b=101;
+        int hang1=(int)a+(int)(Math.random()*(b-a));
+        //确定随机数范围(1-100)(包含1和100)
+        System.out.print(hang1+"列");
+    }
+    static void lie() {
+        double c=0;
+        double d=101;
+        int lie1=(int)c+(int)(Math.random()*(d-c));
+        System.out.println(lie1+"号");
+    }
+}
+类2
+package com.choujiang.aaa;
+//本类用于输出所抽奖的人数
+public class ShuZu {
+    public static void shi() {
+        for(int i=0;i<10;i++) {
+            SuiJiShu.hang();
+            SuiJiShu.lie();
+        }
+    }
+}
+类3
+package com.choujiang.aaa;
+//本类用于测试
+public class Test {
+    public static void main(String args[]) {
+        System.out.println("获得奖品的观众的座位号是:");
+//      SuiJiShu.hang();
+//      SuiJiShu.lie();
+        ShuZu.shi();
+    }
+}
+效果:
+获得奖品的观众的座位号是:
+34列12号
+79列27号
+1列66号
+45列68号
+20列8号
+46列28号
+73列26号
+12列59号
+15列100号
+93列94号
