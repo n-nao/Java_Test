@@ -1,0 +1,24 @@
+package com.xxxxxxxpaixu;
+import java.util.Arrays;
+/*
+ * 对数组排序
+ */
+public class Demo {
+    public static void main(String[] args) {
+        //对数组升序排序
+        int arr[]=new int [] {23,34,1,4};//定义一个数组
+        Arrays.sort(arr);//对数组升序排序
+        for(int i=0;i<arr.length;i++) {
+            System.out.print(arr[i]+"  ");//遍历输出数组
+        }
+        System.out.println();
+        
+        //对数组倒序排序
+        int arr1[]=new int[] {1,4,65,34};
+        Arrays.sort(arr1);//对数组升序排序
+        for(int m=arr1.length-1;m>=0;m--) {
+            System.out.print(arr1[m]+"  ");//对数组倒序输出
+        }
+    }
+}
+运行结果:
