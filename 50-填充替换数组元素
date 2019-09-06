@@ -1,0 +1,25 @@
+package com.xxxxxxxtihuan;
+import java.util.Arrays;
+/*
+ * 填充替换数组元素
+ */
+public class Demo {
+    public static void main(String[] args) {
+        int arr[]=new int[5];
+        Arrays.fill(arr, 8);//填充替换数组元素所有的值
+        for(int i=0;i<arr.length;i++) {
+            System.out.println("第"+i+"个元素的值为"+arr[i]);
+        }
+        System.out.println();
+        
+        
+        int arr1[]=new int [] {45,12,2,10};
+        Arrays.fill(arr1,1,2,8);//替换第一个字符的值变为8
+        for(int i=0;i<arr1.length;i++) {
+            System.out.println("第"+i+"个元素的值为"+arr1[i]);
+        }
+    }
+}
+
+运行结果:
+
