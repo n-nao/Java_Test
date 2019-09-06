@@ -1,0 +1,18 @@
+package com.xxxxxxxczi;
+/*
+ * 使用String类的toUpperCase()方法和toLowerCase()方法来实现大小写转换
+ */
+public class Demo {
+    public static void main(String[] args) {
+        String asd="abcdefgh";
+        //将小写字符串转换成大写
+        String qwe=asd.toUpperCase();
+        System.out.println("转换成大写字符串"+qwe);
+        
+        String zxc="ZXCVBN";
+        //将大写字符串转换成小写
+        String rty=zxc.toLowerCase();
+        System.out.println("将大写字符串转换成小写"+rty);
+    }
+}
+运行结果:
