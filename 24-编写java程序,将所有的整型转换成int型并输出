@@ -1,0 +1,25 @@
+package com.xxxxxxxxxzhuanhuan;
+/*
+ 编写java程序,将所有的整型转换成int型并输出
+ */
+public class Demo {
+    public static void main(String [] args) {
+       //声明整型变量
+       byte mybyte=54;
+       short myshort=2345;
+       long mylong=2345;
+       //定义int类型变量
+       int a,b,c;
+///////////将整型变量赋值给int型变量//////////
+       //隐式类型转换
+       a=mybyte;
+       b=myshort;
+       //显示类型转换
+       c=(int)mylong;
+       //输出转换后的结果
+       System.out.println(a);
+       System.out.println(b);
+       System.out.println(c);
+    }
+}
+运行结果
