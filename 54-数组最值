@@ -1,0 +1,42 @@
+package com.xxxxxxxshuzuzuizhi;
+/*
+ * 数组最值
+ */
+public class Demo {
+     public static void main(String[] args) {
+          int arr[]= {4,1,6,3,9,8};//定义数组
+          
+          //获取取数组最大值
+          int max=getMax(arr);//调用类获取数组最大值
+          System.out.println("最大值max为"+max);//输出数组最大值
+          
+          //获取数组最小值
+          int six=getSix(arr);//调用类获取数组最小值
+          System.out.println("最小值six为"+six);
+     }
+     
+     //获取最大值函数
+     static int getMax(int arr[]) {//定义类,并调用数组
+          int max=arr[0];//定义max的值
+          for(int i=0;i<arr.length;i++) {//循环遍历数组
+              if(arr[i]>max) {//判断数组元素值是否大于max的值
+                   max=arr[i];//将数组元素值赋值给max
+              }
+          }
+          return max;//返回max的值
+     }
+     
+     //获取最小值函数
+     static int getSix(int arr[]) {
+          int six=arr[0];
+          for(int i=0;i<arr.length;i++) {
+              if(arr[i]<six) {
+                   six=arr[i];
+              }
+          }
+          return six;
+          
+     }
+}
+
+运行结果:
