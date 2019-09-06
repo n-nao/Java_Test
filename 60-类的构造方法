@@ -1,0 +1,15 @@
+package com.leiheduixiang.gouzaofangfa;
+/*
+ * 类的构造方法
+ */
+public class Demo {
+   
+   public Demo() {//定义无参构造方法
+      this("this调用有参构造方法");
+      System.out.println("无参构造方法");
+   }
+   
+   public Demo(String name) {//定义有参构造方法
+      System.out.println("有参构造方法");
+   }
+}
