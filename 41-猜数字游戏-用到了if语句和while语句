@@ -1,0 +1,32 @@
+package com.xxxxxxxcaishuzi;
+import java.util.Random;
+import java.util.Scanner;
+/*
+ * 猜数字游戏-用到了if语句和while语句
+ */
+public class Demo {
+    public static void main(String[] args) {
+        //通过Random类中的nextInt(int n)方法,生成一个0~9的随机数
+        int randomNumber=new Random().nextInt(10);
+        System.out.println("随机数已经生成");
+        //输入猜的数字
+        System.out.println("请输入你猜到的数字");
+        Scanner sc=new Scanner(System.in);
+        int enterNumber=sc.nextInt();
+        //通过while循环,进行猜数字对错判断
+        //猜对结束循环
+        while(enterNumber!=randomNumber) {
+            if(enterNumber>randomNumber) {
+                System.out.println("猜大了,随机数为");
+            }else {
+                System.out.println("猜小了");
+            }
+            System.out.println("请输入你猜到的数字");
+            enterNumber=sc.nextInt();
+        }
+        System.out.println("猜对了");
+    }
+}
+
+运行结果:
+
