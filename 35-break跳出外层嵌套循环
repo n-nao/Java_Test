@@ -1,0 +1,20 @@
+package com.xxxxxxxxxutiaowai;
+/*
+ * break跳出外层循环
+ * 格式:       标签名 : 循环体{
+ *                 break 标签名;
+ *             }
+ */
+public class Demo {
+    public static void main(String[] args) {
+       Loop:for(int i=0;i<3;i++) {//在for循环前用标签标记
+               for(int j=0;j<6;j++) {
+                  if(j==4) {     //如果j等于4就结束外层循环
+                      break Loop;//跳出Loop标签标记的循环体
+                  }
+                  System.out.println("i="+i+"j="+j);
+               }
+       }
+    }
+}
+运行结果:
