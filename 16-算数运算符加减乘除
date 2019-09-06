@@ -1,0 +1,17 @@
+package com.xxxxxxxxxxx.shiyi;
+public class Demo {
+    /////////运算符/////////
+    public static void main(String [] args) {
+        float number1=45.56f;//定义float类型变量并赋值
+        int number2=152;//定义int型变量并赋值
+        System.out.println("和为:"+(number1+number2));//求和
+        System.out.println("差为:"+(number1-number2));//求差
+        System.out.println("乘积为:"+(number1*number2));//求积
+        System.out.println("商为:"+(number1/number2));//求商
+        System.out.println("余为:"+(number1%number2));//求余
+        
+        
+    }
+}
+
+运行结果:
