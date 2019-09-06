@@ -1,0 +1,21 @@
+package com.xxxxxxxbianli;
+/*
+ * 遍历二维数组,双层for循环
+ */
+public class Demo {
+    public static void main(String[] args) {
+        //创建二维数组
+        int b[][]=new int [][]{{1},{2,3},{4,5,6}};
+        //遍历数组
+        //外层循环遍历外层数组
+        for(int i=0;i<b.length;i++) {
+            for (int j=0;j<b[i].length;j++) {
+                //内层循环遍历内层数组
+                System.out.print(b[i][j]);//输出数组的值
+            }
+            //换行
+            System.out.println();
+        }
+    }
+}
+运行结果:
