@@ -1,0 +1,17 @@
+package com.xxxxxxxxxifelseif;
+/*
+ * if....else if语句
+ */
+public class Demo {
+    public static void main(String[] args) {
+        int x=20;
+        if(x>30) {
+            System.out.println("x的值大于30");
+        }else if (x>10) {
+            System.out.println("x的值大于10,小于30");
+        }else {
+            System.out.println("x的值小于10");
+        }
+    }
+}
+/运行结果:
