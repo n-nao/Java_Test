@@ -1,0 +1,14 @@
+package com.leiheduixinag.duixiang;
+/*
+ * 创建对象
+ */
+public class Demo {
+   public Demo() {//构造方法
+      System.out.println("创建对象");
+   }
+   
+   public static void main(String [] args) {
+      new Demo();//创建对象
+   }
+}
+运行结果:
