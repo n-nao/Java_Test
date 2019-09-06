@@ -1,0 +1,27 @@
+package com.xxxxxxxxxxxshujuleixingzhuanhuan;
+//数据类型转换
+public class Demo {
+    public static void main(String [] args) {
+//     定义各种类型的变量
+       byte mybyte=124;
+       int myint=234;
+       float myfloat=45323.45f;
+       char mychar=10;
+       double mydouble=34.34834;
+       ///////输出运算结果==隐式类型转换///////
+       System.out.println("byte型与float型数据进行运算:"+(mybyte+myfloat));
+       System.out.println("byte与int数据进行运算"+(mybyte*myint));
+       System.out.println("byte与char进行数据计算"+(mybyte/mychar));
+       System.out.println("double与char进行计算"+(mydouble+mychar));
+       
+       ///////显示类型转换==强制类型转换/////////////
+       int a=(int)45.34;//将double型变量转换成int型
+       System.out.println(a);
+       long b=(long)345.4f;//将float型变量转换成long型
+       int c=(int)'d';//将char型转换成int型
+       System.out.println("c");
+    }
+}
+
+运行结果
+
